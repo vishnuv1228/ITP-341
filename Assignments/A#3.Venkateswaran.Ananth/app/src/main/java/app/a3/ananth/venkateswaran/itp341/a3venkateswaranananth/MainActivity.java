@@ -1,5 +1,6 @@
 package app.a3.ananth.venkateswaran.itp341.a3venkateswaranananth;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -111,26 +112,32 @@ public class MainActivity extends Activity {
                 case R.id.americanButton:
                     String msgA = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.american) + " " + counterAm++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgA, Toast.LENGTH_SHORT).show();
+                    btnAmerican.setImageResource(R.drawable.american_clicked);
                     break;
                 case R.id.chineseButton:
                     String msgC = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.chinese) + " " + counterCh++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgC, Toast.LENGTH_SHORT).show();
+                    btnChinese.setImageResource(R.drawable.chinese_clicked);
                     break;
                 case R.id.indianButton:
                     String msgIn = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.indian) + " " + counterIn++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgIn, Toast.LENGTH_SHORT).show();
+                    btnIndian.setImageResource(R.drawable.indian_clicked);
                     break;
                 case R.id.italianButton:
                     String msgIt = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.italian) + " " + counterIt++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgIt, Toast.LENGTH_SHORT).show();
+                    btnItalian.setImageResource(R.drawable.italian_clicked);
                     break;
                 case R.id.middle_eastButton:
                     String msgM = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.middle_east) + " " + counterMi++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgM, Toast.LENGTH_SHORT).show();
+                    btnMiddleEast.setImageResource(R.drawable.middle_east_clicked);
                     break;
                 case R.id.portugueseButton:
                     String msgP = getResources().getString(R.string.liked) + " " + getResources().getString(R.string.portuguese) + " " + counterPo++ + " " + getResources().getString(R.string.times);
                     Toast.makeText(MainActivity.this,msgP, Toast.LENGTH_SHORT).show();
+                    btnPortuguese.setImageResource(R.drawable.portuguese_clicked);
                     break;
             }
         }

@@ -49,7 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/american"
-                        android:id="@+id/textView2"
+                        android:id="@+id/americanText"
                         android:gravity="center"
                         />
 
@@ -72,7 +72,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/indian"
-                        android:id="@+id/textView3"
+                        android:id="@+id/indianText"
                         android:gravity="center"/>
                 </LinearLayout>
 
@@ -94,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/middle_east"
                         android:gravity="center"
-                        android:id="@+id/textView4" />
+                        android:id="@+id/middle_eastText" />
 
                 </LinearLayout>
 
@@ -103,7 +103,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -115,11 +116,64 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:id="@+id/imageButton"
+                        android:id="@+id/chineseButton"
                         android:src="@drawable/chinese"
                         android:scaleType="fitXY"
                         android:background="@android:color/transparent"
                         android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chinese"
+                        android:id="@+id/chineseText"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="146dp"
+                    android:layout_height="145dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:id="@+id/italianButton"
+                        android:src="@drawable/italian"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/italian"
+                        android:id="@+id/italianText"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="146dp"
+                    android:layout_height="145dp"
+                    android:layout_marginLeft="16dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:id="@+id/portugueseButton"
+                        android:src="@drawable/portuguese"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/portuguese"
+                        android:id="@+id/portugueseText"
+                        android:gravity="center"/>
                 </LinearLayout>
             </LinearLayout>
 

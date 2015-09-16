@@ -8,4 +8,6 @@
     <string name="chinese">Chinese</string>
     <string name="italian">Italian</string>
     <string name="portuguese">Portuguese</string>
+    <string name="liked">You liked</string>
+    <string name="times">times!</string>
 </resources>

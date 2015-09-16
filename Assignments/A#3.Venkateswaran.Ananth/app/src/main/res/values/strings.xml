@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">A#3.Venkateswaran.Ananth</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Favourite Food</string>
+    <string name="american">American</string>
+    <string name="indian">Indian</string>
+    <string name="middle_east">Middle East</string>
+</resources>

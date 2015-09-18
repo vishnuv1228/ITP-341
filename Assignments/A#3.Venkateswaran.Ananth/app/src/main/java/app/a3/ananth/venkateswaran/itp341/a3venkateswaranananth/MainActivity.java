@@ -1,11 +1,7 @@
 package app.a3.ananth.venkateswaran.itp341.a3venkateswaranananth;
 
-
-import android.app.ActionBar;
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,7 +9,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     ImageButton btnAmerican;
     ImageButton btnChinese;

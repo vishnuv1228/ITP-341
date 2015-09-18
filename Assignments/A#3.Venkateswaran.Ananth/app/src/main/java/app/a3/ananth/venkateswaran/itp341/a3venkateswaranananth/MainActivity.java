@@ -1,8 +1,11 @@
 package app.a3.ananth.venkateswaran.itp341.a3venkateswaranananth;
 
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     ImageButton btnAmerican;
     ImageButton btnChinese;
@@ -34,7 +37,6 @@ public class MainActivity extends Activity {
     public static final String COUNTER_IT = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.counterIt";
     public static final String COUNTER_MI = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.counterMi";
     public static final String COUNTER_PO = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.counterPo";
-
 
 
     protected void onSaveInstanceState(Bundle outState) {
@@ -142,4 +144,7 @@ public class MainActivity extends Activity {
             }
         }
     }
+
+
+
 }

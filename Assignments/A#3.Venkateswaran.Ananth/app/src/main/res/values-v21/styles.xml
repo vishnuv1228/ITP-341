@@ -2,6 +2,7 @@
 <resources>
     <style name="AppTheme" parent="android:Theme.Material.Light">
         <item name="android:colorPrimary">#800000</item>
+        <item name="android:statusBarColor">#800000</item>
     </style>
 
 </resources>

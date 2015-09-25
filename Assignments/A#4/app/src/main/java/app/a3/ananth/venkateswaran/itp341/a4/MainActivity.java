@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
     TextView perPersonAmount1;
 
     // instance variables
-    int bill = 0;
+    double bill = 0;
     int percent = 0;
     double tip = 0;
     double total = 0;
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
 
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(BILL, bill);
+        outState.putDouble(BILL, bill);
         outState.putInt(PERCENT, percent);
         outState.putDouble(TIP, tip);
         outState.putDouble(TOTAL, total);
@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
                 Log.d(TAG, "inside onEditorAction");
                 // set bill int variable to value user inputs
                 String input = tv.getText().toString();
-                bill = Integer.parseInt(input);
+                bill = Double.parseDouble(input);34.44
                 createAmounts();
                 return false;
             }

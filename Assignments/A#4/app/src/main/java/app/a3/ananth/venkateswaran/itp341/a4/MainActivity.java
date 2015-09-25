@@ -38,13 +38,38 @@ public class MainActivity extends Activity {
     double total = 0;
     int perPerson = 0;
 
+    public static final String BILL = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.bill";
+    public static final String PERCENT = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.percent";
+    public static final String TIP = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.tip";
+    public static final String TOTAL = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.total";
+    public static final String PERPERSON = " app.a3.ananth.venkateswaran.itp41.a3venkateswaranananth.perPerson";
 
+
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(BILL, bill);
+        outState.putInt(PERCENT, percent);
+        outState.putDouble(TIP, tip);
+        outState.putDouble(TOTAL, total);
+        outState.putInt(PERPERSON, perPerson);
+
+    }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Save on rotation
+        if (savedInstanceState != null)
+        {
+            bill = savedInstanceState.getInt(BILL, 0);
+            percent = savedInstanceState.getInt(PERCENT, 0);
+            tip = savedInstanceState.getInt(TIP, 0);
+            total = savedInstanceState.getInt(TOTAL, 0);
+            perPerson = savedInstanceState.getInt(PERPERSON, 0);
+        }
+
 
         // get reference to widgets
 

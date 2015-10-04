@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">A#5.Venkateswaran.Ananth</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="player1">Christie Monteiro</string>
+    <string name="player2"> Sergei Dragunov</string>
+    <string name="player3"> Jin Kazama</string>
+    <string name="email">Email:</string>
+    <string name="phone">Phone:</string>
+    <string name="address">Address:</string>
+    <string name="notes">Notes:</string>
+    <string name="notesDefault">Write a line or two about the person.</string>
+    <string name="Agmail">abc\@gmail.com</string>
+    <string name="Phone1">(768)-812-3234</string>
+    <string name="Phone2">(832)-648-9321</string>
+    <string name="Phone3">(090)-193-2130</string>
+    <string name="Address">3002 Brook Drive\nLos Angeles, California</string>
+    <string name="Address1">9123 Avant Boulevard\n Columbus, Ohio</string>
+    <string name="Address2">1831 Orchard Avenue\n Los Angeles, California </string>
+    <string name="Bgmail">aed\@gmail.com</string>
+    <string name="Cgmail">bcd\@gmail.com</string>
+</resources>

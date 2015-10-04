@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="p1_data">
+        <item>@string/player1</item>
+        <item>@string/Agmail</item>
+        <item>@string/Phone1</item>
+        <item>@string/Address</item>
+    </string-array>
+    <string-array name="p2_data">
+        <item>@string/player2</item>
+        <item>@string/Bgmail</item>
+        <item>@string/Phone2</item>
+        <item>@string/Address1</item>
+    </string-array>
+    <string-array name="p3_data">
+        <item>@string/player3</item>
+        <item>@string/Cgmail</item>
+        <item>@string/Phone3</item>
+        <item>@string/Address2</item>
+    </string-array>
+
+
+</resources>

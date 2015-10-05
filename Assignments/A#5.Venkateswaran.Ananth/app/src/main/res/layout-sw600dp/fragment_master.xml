@@ -50,7 +50,6 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.15"
             android:layout_gravity="center_horizontal"
             android:id="@+id/name3" >
 
@@ -79,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.15"
-            android:id="@+id/linearLayout2" >
+            android:id="@+id/nameImage" >
 
             <EditText
                 android:layout_width="wrap_content"
@@ -88,7 +87,7 @@
                 android:maxLines="1"
                 android:textColor="#313F42"
                 android:textSize="20sp"
-                android:id="@+id/editText"
+                android:id="@+id/nameSelection"
                 android:layout_gravity="center_vertical" />
 
             <ImageView
@@ -96,7 +95,7 @@
                 android:layout_height="173dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:id="@+id/imageView"
+                android:id="@+id/personImage"
                 android:src="@drawable/person" />
         </LinearLayout>
 
@@ -104,8 +103,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="340dp"
-            android:weightSum="1"
-            android:layout_weight="0.43" >
+            android:weightSum="1">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -129,7 +127,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="37dp"
                     android:maxLines="1"
-                    android:id="@+id/editText2"
+                    android:id="@+id/emailInput"
                     android:layout_weight="0.43"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
@@ -153,7 +151,7 @@
                     android:layout_width="292dp"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:id="@+id/editText3"
+                    android:id="@+id/phoneInput"
                     android:layout_marginLeft="32dp" />
             </LinearLayout>
 
@@ -176,7 +174,7 @@
                 <EditText
                     android:layout_width="294dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editText4"
+                    android:id="@+id/addressInput"
                     android:maxLines="2"
                     android:layout_marginLeft="17dp" />
             </LinearLayout>
@@ -194,7 +192,7 @@
             <EditText
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText5"
+                android:id="@+id/notesInput"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.09"
                 android:layout_marginLeft="10dp"

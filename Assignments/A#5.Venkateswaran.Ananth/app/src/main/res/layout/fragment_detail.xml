@@ -5,143 +5,150 @@
     tools:context="app.a5.ananth.venkateswaran.itp341.a5venkateswaranananth.DetailFragment">
 
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/overallLayout"
-        android:background="#9E9A94"
-        android:weightSum="1">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.15"
-            android:id="@+id/nameImage">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:text=""
-                android:maxLines = "1"
-                android:textColor="#313F42"
-                android:textSize="20sp"
-                android:id="@+id/nameSelection"
-                android:layout_gravity="center_vertical" />
-
-            <ImageView
-                android:layout_width="146dp"
-                android:layout_height="173dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/personImage"
-                android:src="@drawable/person"/>
-        </LinearLayout>
+        android:id="@+id/scrollView" >
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="224dp"
-            android:weightSum="1"
-            android:layout_weight="0.43">
+            android:layout_height="match_parent"
+            android:id="@+id/overallLayout"
+            android:background="#9E9A94"
+            android:weightSum="1">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/emailField"
-                android:layout_weight="0.09"
-                android:weightSum="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/email"
-                    android:textSize="17sp"
-                    android:textColor="#313F42"
-                    android:id="@+id/email" />
+                android:layout_weight="0.15"
+                android:id="@+id/nameImage">
 
                 <EditText
-                    android:layout_width="227dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="37dp"
+                    android:layout_marginLeft="30dp"
+                    android:text=""
                     android:maxLines = "1"
-                    android:id="@+id/emailInput"
-                    android:layout_weight="0.43" />
+                    android:textColor="#313F42"
+                    android:textSize="20sp"
+                    android:id="@+id/nameSelection"
+                    android:layout_gravity="center_vertical" />
+
+                <ImageView
+                    android:layout_width="146dp"
+                    android:layout_height="173dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/personImage"
+                    android:src="@drawable/person"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:id="@+id/phoneField">
+                android:layout_height="340dp"
+                android:weightSum="1"
+                android:layout_weight="0.43">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailField"
+                    android:layout_weight="0.09"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="@string/email"
+                        android:textSize="17sp"
+                        android:textColor="#313F42"
+                        android:id="@+id/email" />
+
+                    <EditText
+                        android:layout_width="227dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="37dp"
+                        android:maxLines = "1"
+                        android:id="@+id/emailInput"
+                        android:layout_weight="0.43"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:id="@+id/phoneField">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+
+                        android:textSize="17sp"
+                        android:text="@string/phone"
+                        android:textColor="#313F42"
+                        android:id="@+id/phone" />
+
+                    <EditText
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines = "1"
+                        android:id="@+id/phoneInput"
+                        android:layout_marginLeft="32dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressField"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="17sp"
+                        android:text="@string/address"
+                        android:textColor="#313F42"
+                        android:id="@+id/address" />
+
+                    <EditText
+                        android:layout_width="244dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addressInput"
+                        android:maxLines = "2"
+                        android:layout_marginLeft="17dp" />
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-
+                    android:layout_marginLeft="30dp"
                     android:textSize="17sp"
-                    android:text="@string/phone"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/notes"
                     android:textColor="#313F42"
-                    android:id="@+id/phone" />
+                    android:id="@+id/notes" />
 
                 <EditText
-                    android:layout_width="242dp"
+                    android:layout_width="340dp"
                     android:layout_height="wrap_content"
-                    android:maxLines = "1"
-                    android:id="@+id/phoneInput"
-                    android:layout_marginLeft="32dp" />
+                    android:id="@+id/notesInput"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.09"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/notesDefault" />
 
             </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/addressField"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:textSize="17sp"
-                    android:text="@string/address"
-                    android:textColor="#313F42"
-                    android:id="@+id/address" />
-
-                <EditText
-                    android:layout_width="244dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/addressInput"
-                    android:maxLines = "2"
-                    android:layout_marginLeft="17dp" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="17sp"
-                android:layout_marginTop="30dp"
-                android:text="@string/notes"
-                android:textColor="#313F42"
-                android:id="@+id/notes" />
-
-            <EditText
-                android:layout_width="340dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/notesInput"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.09"
-                android:layout_marginLeft="10dp"
-                android:text="@string/notesDefault" />
-
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

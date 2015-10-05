@@ -5,13 +5,21 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.KeyListener;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
+
+    EditText name;
+    EditText emailField;
+    EditText phoneField;
+    EditText addressField;
+    EditText notes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +48,26 @@ public class MainActivity extends Activity {
             transaction.replace(R.id.masterFragmentRegular, detailFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+
         }
+        // Initialize variables
+        name = (EditText) findViewById(R.id.nameSelection);
+        emailField = (EditText) findViewById(R.id.emailInput);
+        phoneField = (EditText) findViewById(R.id.phoneInput);
+        addressField = (EditText) findViewById(R.id.addressInput);
+        notes = (EditText) findViewById(R.id.notesInput);
+
+
+
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -58,11 +77,9 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

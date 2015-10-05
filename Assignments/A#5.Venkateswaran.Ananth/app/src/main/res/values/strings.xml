@@ -21,4 +21,6 @@
     <string name="Address2">1831 Orchard Avenue\n Los Angeles, California </string>
     <string name="Bgmail">aed\@gmail.com</string>
     <string name="Cgmail">bcd\@gmail.com</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
 </resources>

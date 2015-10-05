@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,19 +16,6 @@ import android.widget.Button;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment implements View.OnClickListener {
-    public interface PassString {
-        public void passName(String name);
-    }
-    PassString mCallBack;
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-
-        try {
-            mCallBack = (PassString) activity;
-        } catch(ClassCastException e) {
-            throw new ClassCastException(activity.toString() + "must implement PassString");
-        }
-    }
 
     Button player1Button;
     Button player2Button;
@@ -53,15 +41,9 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
         Button b = (Button) v;
         String userOption = b.getText().toString();
-        mCallBack.passName(userOption);
-        DetailFragment detailFragment = new DetailFragment();
-        FragmentManager manager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = manager.beginTransaction();
-        fragmentTransaction.add(R.id.masterFragmentRegular, detailFragment, "Detail Handset");
-        Bundle args = new Bundle();
-        args.putString("Name", userOption);
-        detailFragment.setArguments(args);
-        fragmentTransaction.commit();
+        Intent intent = new Intent(getActivity().getBaseContext(), MainActivity.class);
+        intent.putExtra("message", userOption);
+        getActivity().startActivity(intent);
     }
 
 

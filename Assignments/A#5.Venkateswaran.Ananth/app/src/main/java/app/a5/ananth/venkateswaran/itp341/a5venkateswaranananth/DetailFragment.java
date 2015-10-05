@@ -4,98 +4,61 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link DetailFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link DetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class DetailFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
 
-    private String mParam1;
+    EditText name;
+    EditText emailField;
+    EditText phoneField;
+    EditText addressField;
+    EditText notes;
 
-    private OnFragmentInteractionListener mListener;
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DetailFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static DetailFragment newInstance(String param1, String param2) {
-        DetailFragment fragment = new DetailFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public DetailFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mParam1 = this.getArguments().getString("message");
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Bundle bundle = getArguments();
+        String user = bundle.getString("option");
+
+        View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
+
+        // Initialize variables
+        name = (EditText) rootView.findViewById(R.id.nameSelection);
+        emailField = (EditText) rootView.findViewById(R.id.emailInput);
+        phoneField = (EditText) rootView.findViewById(R.id.phoneInput);
+        addressField = (EditText) rootView.findViewById(R.id.addressInput);
+        notes = (EditText) rootView.findViewById(R.id.notesInput);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail, container, false);
+        Log.d("H", user);
+        fillBlanks(user);
+        return rootView;
     }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+    private void fillBlanks(String user) {
+        if (user.equals(getResources().getString(R.string.player1))) {
+            String [] christie = getResources().getStringArray(R.array.p1_data);
+            fillSpecificField(christie);
+        }
+        else if (user.equals(getResources().getString(R.string.player2))) {
+            String [] sergei = getResources().getStringArray(R.array.p2_data);
+            fillSpecificField(sergei);
+        }
+        else if (user.equals(getResources().getString(R.string.player3))) {
+            String[] jin = getResources().getStringArray(R.array.p3_data);
+            fillSpecificField(jin);
         }
     }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
+    private void fillSpecificField(String[] player) {
+        name.setText(player[0]);
+        emailField.setText(player[1]);
+        phoneField.setText(player[2]);
+        addressField.setText(player[3]);
     }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
-    }
-
 }

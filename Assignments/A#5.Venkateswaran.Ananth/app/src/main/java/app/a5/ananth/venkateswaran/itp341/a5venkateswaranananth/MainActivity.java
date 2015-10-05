@@ -3,18 +3,16 @@ package app.a5.ananth.venkateswaran.itp341.a5venkateswaranananth;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
-public class MainActivity extends Activity implements MainActivityFragment.PassString{
-    String userOption;
+public class MainActivity extends Activity {
 
-    @Override
-    public void passName(String name) {
-        userOption = name;
-
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +23,26 @@ public class MainActivity extends Activity implements MainActivityFragment.PassS
         if (savedInstanceState == null) {
             MainActivityFragment masterFragment = new MainActivityFragment();
             fragmentTransaction.add(R.id.masterFragmentRegular, masterFragment, "Master Handset");
+            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }
-    }
 
+
+        Intent intent = getIntent();
+        String userOption = intent.getStringExtra("message");
+        Log.d("H", "User Option: " + userOption);
+        if (userOption != null) {
+            Bundle bundle = new Bundle();
+            bundle.putString("option", userOption);
+            DetailFragment detailFragment = new DetailFragment();
+            detailFragment.setArguments(bundle);
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.masterFragmentRegular, detailFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
